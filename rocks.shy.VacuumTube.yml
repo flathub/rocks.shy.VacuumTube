@@ -17,6 +17,7 @@ command: startvacuumtube
 separate-locales: false
 
 finish-args:
+  - --socket=x11
   - --socket=pulseaudio
   - --share=ipc # required by x11
   - --share=network

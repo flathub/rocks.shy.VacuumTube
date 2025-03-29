@@ -18,12 +18,10 @@ separate-locales: false
 
 finish-args:
   - --socket=pulseaudio
-  - --socket=wayland
   - --socket=fallback-x11
   - --share=ipc # required by x11
   - --share=network
   - --device=all # for gpu (video decoding) and controllers
-  - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons # this is used to show the correct cursor on Wayland
 
 modules:
   - name: VacuumTube
@@ -50,7 +48,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 2f7df1b9f6bff478f04439c4b2585b8586c14365
+        commit: 219e7515ae60ec5e041d3d3ea7c79e294569b787
         dest: main
 
       - type: file

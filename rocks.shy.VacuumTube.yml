@@ -18,7 +18,6 @@ separate-locales: false
 
 finish-args:
   - --socket=pulseaudio
-  - --socket=fallback-x11
   - --share=ipc # required by x11
   - --share=network
   - --device=all # for gpu (video decoding) and controllers

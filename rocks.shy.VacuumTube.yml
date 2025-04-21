@@ -22,6 +22,7 @@ finish-args:
   - --share=ipc # required by x11
   - --share=network
   - --device=all # for gpu (video decoding) and controllers
+  - --talk-name=org.freedesktop.ScreenSaver # to allow chromium to inhibit screensaver
 
 modules:
   - name: VacuumTube
@@ -48,7 +49,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 3ebdfd432d20d79450aa7cdbca2d7a5f14ef8260
+        commit: 4ade8ba058888d2f77c4a8e4cd24c044149cb79f
         dest: main
 
       - type: file

@@ -23,6 +23,7 @@ finish-args:
   - --share=network
   - --device=all # for gpu (video decoding) and controllers
   - --talk-name=org.freedesktop.ScreenSaver # to allow chromium to inhibit screensaver
+  - --own-name=org.mpris.MediaPlayer2.chromium.* # to allow chromium to create an mpris instance (chromium creates a randomized name, impossible to change even from electron)
 
 modules:
   - name: VacuumTube
@@ -49,7 +50,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 63ba170a44043bb573820036dc12c20aeab66d67
+        commit: 49dd22247bfac2a17bb3af199600de44b1256c19
         dest: main
 
       - type: file

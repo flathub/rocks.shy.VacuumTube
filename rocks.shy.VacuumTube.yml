@@ -44,14 +44,21 @@ modules:
       - install -Dm755 ../startvacuumtube /app/bin/startvacuumtube
       - install -Dm644 flatpak/rocks.shy.VacuumTube.metainfo.xml -t /app/share/metainfo/
       - install -Dm644 flatpak/rocks.shy.VacuumTube.desktop -t /app/share/applications/
-      - install -Dm644 flatpak/rocks.shy.VacuumTube.png -t /app/share/icons/hicolor/256x256/apps
+      - install -Dm644 assets/icons/16x16.png /app/share/icons/hicolor/16x16/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icons/32x32.png /app/share/icons/hicolor/32x32/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icons/48x48.png /app/share/icons/hicolor/48x48/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icons/64x64.png /app/share/icons/hicolor/64x64/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icons/128x128.png /app/share/icons/hicolor/128x128/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icons/256x256.png /app/share/icons/hicolor/256x256/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icons/512x512.png /app/share/icons/hicolor/512x512/apps/rocks.shy.VacuumTube.png
+      - install -Dm644 assets/icon.svg /app/share/icons/hicolor/scalable/apps/rocks.shy.VacuumTube.svg
 
     sources:
       - flatpak-sources.json
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 919bcca07f9359a360a86636e3ab8bff95fc31ce
+        commit: 56c9f7cceaaef2f8de36d6ad5cd0a73462f3ef77
         dest: main
 
       - type: file

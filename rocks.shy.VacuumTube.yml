@@ -22,7 +22,14 @@ finish-args:
   - --share=ipc # required by x11
   - --share=network
   - --device=all # for gpu (video decoding) and controllers
-  - --talk-name=org.freedesktop.ScreenSaver # to allow chromium to inhibit screensaver
+
+  # to allow chromium to inhibit screensaver
+  - --talk-name=org.freedesktop.ScreenSaver
+  - --talk-name=org.gnome.ScreenSaver
+  - --talk-name=org.cinnamon.ScreenSaver
+  - --talk-name=org.mate.ScreenSaver
+  - --talk-name=org.xfce.ScreenSaver
+
   - --own-name=org.mpris.MediaPlayer2.chromium.* # to allow chromium to create an mpris instance (chromium creates a randomized name, impossible to change even from electron)
   - --filesystem=/run/udev:ro # controllers sometimes aren't registered unless this is present
 
@@ -38,7 +45,7 @@ modules:
     build-commands:
       - npm install --offline
       - ../flatpak-node/electron-builder-arch-args.sh
-      - npm run flatpak:build-unpacked -- $ELECTRON_BUILDER_ARCH_ARGS
+      - npm run linux:build-unpacked -- $ELECTRON_BUILDER_ARCH_ARGS
       - cp -a dist/linux*unpacked /app/bin/vacuumtube
 
       - install -Dm755 ../startvacuumtube /app/bin/startvacuumtube
@@ -58,7 +65,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 1a8d0248cf60c5f752cdd845ee8f95a501197d37
+        commit: 1df60ced12bd313435d70f14edbd6548024ec970
         dest: main
 
       - type: file

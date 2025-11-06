@@ -18,10 +18,12 @@ separate-locales: false
 
 finish-args:
   - --socket=x11
+  - --socket=wayland
   - --socket=pulseaudio
   - --share=ipc # required by x11
   - --share=network
   - --device=all # for gpu (video decoding) and controllers
+  - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons # this is used to show the correct cursor on Wayland
 
   # to allow chromium to inhibit screensaver
   - --talk-name=org.freedesktop.ScreenSaver

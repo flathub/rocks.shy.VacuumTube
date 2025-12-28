@@ -67,7 +67,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 06143ed3c24ee5f49d4352e7c5c59b733f333af6
+        commit: ae4407dcfbb8457a963eb649fcf2a1cf391adea5
         dest: main
 
       - type: file

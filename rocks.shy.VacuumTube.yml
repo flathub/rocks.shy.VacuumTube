@@ -11,7 +11,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.node22
 
 build-options:
-  append-path: /usr/lib/sdk/node20/bin
+  append-path: /usr/lib/sdk/node22/bin
 
 command: startvacuumtube
 separate-locales: false

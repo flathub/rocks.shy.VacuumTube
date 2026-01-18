@@ -8,10 +8,10 @@ base: org.electronjs.Electron2.BaseApp
 base-version: *runtime-version
 
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node20
+  - org.freedesktop.Sdk.Extension.node22
 
 build-options:
-  append-path: /usr/lib/sdk/node20/bin
+  append-path: /usr/lib/sdk/node22/bin
 
 command: startvacuumtube
 separate-locales: false
@@ -67,7 +67,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: ae4407dcfbb8457a963eb649fcf2a1cf391adea5
+        commit: 5ccdf35d3143bc684f39b3639e734d3f25feba5d
         dest: main
 
       - type: file

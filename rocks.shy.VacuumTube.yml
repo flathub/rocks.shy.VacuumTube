@@ -8,7 +8,7 @@ base: org.electronjs.Electron2.BaseApp
 base-version: *runtime-version
 
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node20
+  - org.freedesktop.Sdk.Extension.node22
 
 build-options:
   append-path: /usr/lib/sdk/node20/bin

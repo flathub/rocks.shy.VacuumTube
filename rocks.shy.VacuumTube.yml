@@ -1,7 +1,7 @@
 app-id: rocks.shy.VacuumTube
 
 runtime: org.freedesktop.Platform
-runtime-version: &runtime-version '25.08'
+runtime-version: &runtime-version '26.08'
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
@@ -60,7 +60,7 @@ modules:
 
       - type: git
         url: https://github.com/shy1132/VacuumTube.git
-        commit: 665ca9b4c30add776fba948f8b0262fe0ce30178
+        commit: 0c7df3a1e2411b430e416a0b8f3c872bb1f8fb4d
         dest: main
 
       - type: file
